@@ -5,14 +5,14 @@
 <!--[if IE 9 ]><html lang="en" class="no-js ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
 
-<head> <!-- COMMENTAIRE DE VALENTIN -->
+<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 		
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<meta name="generator" content="RapidWeaver" />
 		
-		<title>Home | City-Access</title> 
+		<title>Home | City-Access</title>
 		<link rel="stylesheet" type="text/css" media="all" href="rw_common/themes/allegro/consolidated.css" />
 		
 		
