@@ -15,7 +15,7 @@
 		<title>Home | City-Access</title> 
 		<link rel="stylesheet" type="text/css" media="all" href="rw_common/themes/allegro/consolidated.css" />
 		
-		<!-- Gros commentaire pour test github-->
+		
 		
 		
 		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic' rel='stylesheet' type='text/css'>
