@@ -1,5 +1,9 @@
 <!doctype html>  
 
+<?php
+include 'Includes/fonction.php';
+?>
+
 <!--[if IE 7 ]><html lang="en" class="no-js ie7"><![endif]-->
 <!--[if IE 8 ]><html lang="en" class="no-js ie8"><![endif]-->
 <!--[if IE 9 ]><html lang="en" class="no-js ie9"><![endif]-->
@@ -60,9 +64,13 @@
 
 
 <!-- Barre de recherche pour retrouver un lieu ainsi que le bouton -->
-		<input type="text" id="recherche" name="ville" size"25"  onclick="texte.value='';" placeholder="Rechercher un lieu" /> 
+	<form METHOD="POST" ACTION="index.php" > 
 
-		<input type="button" id="rechercher" name="lien_ok" value="Rechercher" onclick="self.location.href='page0/index.php'" /> 
+	<input type="text" id="recherche" name="ville" size"25"  onclick="texte.value='';" placeholder="Rechercher une ville" /> 
+
+	<input type="submit" id="rechercher" name="lien_ok" value="Rechercher"/> 
+
+	</from>
 
 
 
@@ -150,10 +158,95 @@
 					
 
 <!-- Stacks v1198 --><div id='stacks_out_123_page0' class='stacks_top'><div id='stacks_in_123_page0' class=''><div id='stacks_out_135_page0' class='stacks_out'><div id='stacks_in_135_page0' class='stacks_in float_left_stack'><div class='stacks_div stacks_float_left'>
-<div class='centered_image' ><img class='imageStyle' src='files/stacks_image_136.png' width='116' height='88' alt='Stacks Image 136' /></div>
+<div class='centered_image' ></div>
 </div>
 
-<h1><?php echo $_POST["ville"]  ; ?></h1>
+
+
+<center>
+
+	<h1><?php echo $_POST["ville"] ?></h1>
+
+<?php 
+
+$query = $_POST["ville"];
+$query2 = $query;
+
+$url = 'http://fr.wikipedia.org/w/api.php?format=json&action=parse&page='.$query2;
+$ch = curl_init($url);
+curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
+curl_setopt ($ch, CURLOPT_USERAGENT, "TestScript");
+$c = curl_exec($ch);
+
+$json = json_decode($c);
+
+$content = $json->{'parse'}->{'text'}->{'*'}; 
+
+$i=0;
+
+for($r=1;$r<3;$r++){
+$e=0;
+while ($e==0) {
+
+    if (($content[$i].$content[$i+1].$content[$i+2])=="<p>") {
+        $e=1;
+    }
+    $i=$i+1;
+
+}
+$e=0;
+while ($e==0) {
+
+    if (($content[$i].$content[$i+1].$content[$i+2])=="</p") {
+        $e=1;
+    }
+    $i=$i+1;
+
+}
+}
+
+while ($e==0) {
+
+    if (($content[$i].$content[$i+1].$content[$i+2])=="<p>") {
+        $e=1;
+    }
+    $i=$i+1;
+
+}
+
+$text="";
+$e=0;
+
+while ($e==0) {
+
+    if (($content[$i].$content[$i+1].$content[$i+2])=="yme") {
+        $e=1;
+    }
+
+    $text=$text.$content[$i];
+    $i=$i+1;
+
+}
+
+$text[0]="";
+$text[1]="";
+$text[2]="";
+
+$text=$text.'my"></span></div></div></div></div></div></td></tr></table>';
+
+echo $text; // TRUC 'de psychopathe' AVEC WIKIPEDIA 
+ ?>
+
+
+
+<?php echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$query.'&amp;width=500&amp;height=80&amp;rows=2&amp;columns=20&amp;orientation=horizontal" frameborder="0" width="500" height="80" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>'?>
+
+
+
+
+
+</center>
+
 
 Lorem ipsum dolor sit amet, sapien platea morbi dolor lacus nunc, nunc ullamcorper. Felis aliquet egestas vitae, nibh ante quis quis dolor sed mauris. Erat lectus sem ut lobortis, adipiscing ligula eleifend, sodales fringilla mattis dui nullam. Ac massa aliquet.</div></div><div id='stacks_out_138_page0' class='stacks_out'><div id='stacks_in_138_page0' class='stacks_in html_stack'><span id='stacks_in_139_page0'><center> ——— </center> </span></div></div><div id='stacks_out_162_page0' class='stacks_out'><div id='stacks_in_162_page0' class='stacks_in html_stack'>HERE IS THE BANNER</div></div><div id='stacks_out_170_page0' class='stacks_out'><div id='stacks_in_170_page0' class='stacks_in html_stack'><span id='stacks_in_171_page0'><center> ——— </center> </span></div></div><div id='stacks_out_146_page0' class='stacks_out'><div id='stacks_in_146_page0' class='stacks_in html_stack'>HERE IS THE SEARCH ENGINE</div></div><div id='stacks_out_154_page0' class='stacks_out'><div id='stacks_in_154_page0' class='stacks_in html_stack'>DESCRIPTIONS DES TRUCS
 
