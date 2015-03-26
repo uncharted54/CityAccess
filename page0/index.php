@@ -152,6 +152,9 @@
 <!-- Stacks v1198 --><div id='stacks_out_123_page0' class='stacks_top'><div id='stacks_in_123_page0' class=''><div id='stacks_out_135_page0' class='stacks_out'><div id='stacks_in_135_page0' class='stacks_in float_left_stack'><div class='stacks_div stacks_float_left'>
 <div class='centered_image' ><img class='imageStyle' src='files/stacks_image_136.png' width='116' height='88' alt='Stacks Image 136' /></div>
 </div>
+
+<h1><?php echo $_POST["ville"]  ; ?></h1>
+
 Lorem ipsum dolor sit amet, sapien platea morbi dolor lacus nunc, nunc ullamcorper. Felis aliquet egestas vitae, nibh ante quis quis dolor sed mauris. Erat lectus sem ut lobortis, adipiscing ligula eleifend, sodales fringilla mattis dui nullam. Ac massa aliquet.</div></div><div id='stacks_out_138_page0' class='stacks_out'><div id='stacks_in_138_page0' class='stacks_in html_stack'><span id='stacks_in_139_page0'><center> ——— </center> </span></div></div><div id='stacks_out_162_page0' class='stacks_out'><div id='stacks_in_162_page0' class='stacks_in html_stack'>HERE IS THE BANNER</div></div><div id='stacks_out_170_page0' class='stacks_out'><div id='stacks_in_170_page0' class='stacks_in html_stack'><span id='stacks_in_171_page0'><center> ——— </center> </span></div></div><div id='stacks_out_146_page0' class='stacks_out'><div id='stacks_in_146_page0' class='stacks_in html_stack'>HERE IS THE SEARCH ENGINE</div></div><div id='stacks_out_154_page0' class='stacks_out'><div id='stacks_in_154_page0' class='stacks_in html_stack'>DESCRIPTIONS DES TRUCS
 
 Lorem ipsum dolor sit amet, sapien platea morbi dolor lacus nunc, nunc ullamcorper. Felis aliquet egestas vitae, nibh ante quis quis dolor sed mauris. Erat lectus sem ut lobortis, adipiscing ligula eleifend, sodales fringilla mattis dui nullam. Ac massa aliquet.</div></div></div></div>
@@ -174,7 +177,7 @@ Lorem ipsum dolor sit amet, sapien platea morbi dolor lacus nunc, nunc ullamcorp
 							<li>Mus&eacutee des Beaux Arts</li>
 						</ol>
 
-						<br />Felis aliquet egestas vitae, nibh ante quis quis dolor sed mauris. Erat lectus sem ut lobortis, adipiscing ligula eleifend, sodales fringilla mattis dui nullam. Ac massafuiyqgtedujzfdyigzkDTCIZFAkdvgdftyzaidt aliquet.
+						<br />Felis aliquet egestas vitae, nibh ante quis quis dolor sed mauris. Erat lectus sem ut lobortis, adipiscing ligula eleifend, sodales fringilla mattis dui nullam. Ac massa aliquet.
 						<div id="asidePlug"></div>
 					</aside>
 				</div><!-- sidebar four columns offset-by-one -->

@@ -91,13 +91,13 @@
 <div class='stacks_div stacks_right'>
 <div id='stacks_out_146_page1' class='stacks_out'><div id='stacks_in_146_page1' class='stacks_in html_stack'>
 
-
+	<form METHOD="POST" ACTION="page0/index.php" > 
 
 	<input type="text" id="recherche" name="ville" size"25"  onclick="texte.value='';" placeholder="Rechercher une ville" /> 
 
-		<input type="button" id="rechercher" name="lien_ok" value="Rechercher" onclick="self.location.href='page0/index.php'" /> 
+	<input type="submit" id="rechercher" name="lien_ok" value="Rechercher"/> 
 
-
+	</from>
 
 	</div></div>
 </div></div></div></div></div>
