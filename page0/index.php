@@ -102,11 +102,10 @@ echo Tableau();
 
 
 // DEBUT TRUC WIKIPEDIA
-$thisville = $_POST["ville"];
 
-if (appartient($thisville)) {
-	echo carte_ville($thisville);
-}
+$thisville = $_POST["ville"];
+echo carte_ville($thisville);
+
 // FIN TRUC 'de psychopathe' AVEC WIKIPEDIA 
 
 
@@ -114,7 +113,7 @@ if (appartient($thisville)) {
 
 
 
-<?php echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$query.'&amp;width=500&amp;height=80&amp;rows=2&amp;columns=20&amp;orientation=horizontal" frameborder="0" width="500" height="80" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>'?>
+<?php echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$_POST["ville"].'&amp;width=600&amp;height=120&amp;rows=1&amp;columns=8&amp;orientation=horizontal" frameborder="0" width="600" height="120" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>'?>
 
 
 
