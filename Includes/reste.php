@@ -1,6 +1,46 @@
  <?php
 
- function headphp(){
+
+ function headphp3(){
+
+	$head='<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="RapidWeaver" />
+		
+		<title>Ville | City-Access</title>
+		<link rel="stylesheet" type="text/css" media="all" href="../rw_common/themes/allegro/consolidated.css" />
+		
+		
+		
+		
+		<link href="http://fonts.googleapis.com/css?family=Merriweather:400,400italic" rel="stylesheet" type="text/css">
+		<link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+		<script type="text/javascript" src="../rw_common/themes/allegro/javascript.js"></script>
+		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/function.js"></script>
+		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/retina.js"></script>
+		
+  		<script>RwSet={pathto:"../rw_common/themes/allegro/javascript.js",baseurl:"http://www.city-access.com/"};</script>
+  		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/modernizr.min.js"></script>
+  		
+		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/slideshow/jquery.easing.1.3.js"></script>
+  		
+  		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/sidebar/left.js"></script>
+		
+		
+		
+	    		<link rel="stylesheet" type="text/css" media="all" href="../rw_common/plugins/stacks/stacks.css" />
+
+		<link rel="stylesheet" type="text/css" media="all" href="files/stacks_page_page2.css" />
+		<script type="text/javascript" charset="utf-8" src="files/stacks_page_page2.js"></script>'
+		;
+
+		return $head;
+}
+
+ function headphp1(){
 
 	$head='<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
