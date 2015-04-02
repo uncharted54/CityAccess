@@ -1,7 +1,9 @@
 <!doctype html>  
 
 <?php
-include 'Includes/fonction.php';
+if( ! defined('ROOT_PATH') )	define('ROOT_PATH', dirname(__FILE__).'/..');
+
+include ROOT_PATH.'/Includes/fonction.php';
 ?>
 
 <!--[if IE 7 ]><html lang="en" class="no-js ie7"><![endif]-->
