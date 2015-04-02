@@ -169,10 +169,15 @@ include 'Includes/fonction.php';
 
 <?php 
 
+
+
+/*  DEBUT TRUC WIKIPEDIA
+
 $query = $_POST["ville"];
 $query2 = $query;
 
 $url = 'http://fr.wikipedia.org/w/api.php?format=json&action=parse&page='.$query2;
+$url = 'http://fr.wikipedia.org/w/api.php?format=json&action=parse&page=Nancy';
 $ch = curl_init($url);
 curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt ($ch, CURLOPT_USERAGENT, "TestScript");
@@ -234,7 +239,9 @@ $text[2]="";
 
 $text=$text.'my"></span></div></div></div></div></div></td></tr></table>';
 
-echo $text; // TRUC 'de psychopathe' AVEC WIKIPEDIA 
+echo $text;
+
+*/ // FIN TRUC 'de psychopathe' AVEC WIKIPEDIA 
  ?>
 
 
