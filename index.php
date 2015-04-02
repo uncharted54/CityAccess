@@ -1,5 +1,13 @@
 <!doctype html>  
 
+<?php
+if( ! defined('ROOT_PATH') )	define('ROOT_PATH', dirname(__FILE__).'/..');
+
+include_once ROOT_PATH.'/Includes/fonction.php';
+include_once ROOT_PATH.'/Includes/reste.php';
+
+?>
+
 <!--[if IE 7 ]><html lang="en" class="no-js ie7"><![endif]-->
 <!--[if IE 8 ]><html lang="en" class="no-js ie8"><![endif]-->
 <!--[if IE 9 ]><html lang="en" class="no-js ie9"><![endif]-->

@@ -3,7 +3,10 @@
 <?php
 if( ! defined('ROOT_PATH') )	define('ROOT_PATH', dirname(__FILE__).'/..');
 
-include ROOT_PATH.'/Includes/fonction.php';
+include_once ROOT_PATH.'/Includes/fonction.php';
+include_once ROOT_PATH.'/Includes/reste.php';
+include_once ROOT_PATH.'/Includes/tableau.php';
+
 ?>
 
 <!--[if IE 7 ]><html lang="en" class="no-js ie7"><![endif]-->
@@ -12,46 +15,8 @@ include ROOT_PATH.'/Includes/fonction.php';
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
 
 <head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="generator" content="RapidWeaver" />
-		
-		<title>Ville | City-Access</title>
-		<link rel="stylesheet" type="text/css" media="all" href="../rw_common/themes/allegro/consolidated.css" />
-		
-		
-		
-		
-		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic' rel='stylesheet' type='text/css'>
-		<link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-		<script type="text/javascript" src="../rw_common/themes/allegro/javascript.js"></script>
-		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/function.js"></script>
-		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/retina.js"></script>
-		
-  		<script>RwSet={pathto:"../rw_common/themes/allegro/javascript.js",baseurl:"http://www.city-access.com/"};</script>
-  		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/modernizr.min.js"></script>
-  		
-		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/slideshow/jquery.easing.1.3.js"></script>
-  		
-  		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/sidebar/left.js"></script>
-		
-		
-		
-	    		<link rel='stylesheet' type='text/css' media='all' href='../rw_common/plugins/stacks/stacks.css' />
-		<!--[if lte IE 7]>
-			<link rel='stylesheet' type='text/css' media='all' href='../rw_common/plugins/stacks/stacks_ie.css' />
-		<![endif]-->
-		<link rel='stylesheet' type='text/css' media='all' href='files/stacks_page_page0.css' />
-		<script type='text/javascript' charset='utf-8' src='files/stacks_page_page0.js'></script>
 
-	    
-	    
-	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<style>.skiptonav, #menu {display:none;}</style>
-	<![endif]-->
+<?php echo headphp(); ?>
 
 </head>
 	
@@ -94,48 +59,11 @@ include ROOT_PATH.'/Includes/fonction.php';
 
 <div>
 
-		<ul id="menu-demo2">
-	<li><a href="#">Mus&eacutee</a>
-		<ul>
-			<li><a href="#">lien sous menu 1</a></li>
-			<li><a href="#">lien sous menu 1</a></li>
-			<li><a href="#">lien sous menu 1</a></li>
-			<li><a href="#">lien sous menu 1</a></li>
-		</ul>
-	</li>
-	<li><a href="#">Resto</a>
-		<ul>
-			<li><a href="#">Lien sous menu 2</a></li>
-			<li><a href="#">Lien sous menu 2</a></li>
-			<li><a href="#">Lien sous menu 2</a></li>
-			<li><a href="#">Lien sous menu 2</a></li>
-		</ul>
-	</li>
-	<li><a href="#">Magasin</a>
-		<ul>
-			<li><a href="#">lien sous menu 3</a></li>
-			<li><a href="#">lien sous menu 3</a></li>
-			<li><a href="#">lien sous menu 3</a></li>
-			<li><a href="#">lien sous menu 3</a></li>
-		</ul>
-	</li>
-	<li><a href="#">Loisir</a>
-		<ul>
-			<li><a href="#">Lien sous menu 4</a></li>
-			<li><a href="#">Lien sous menu 4</a></li>
-			<li><a href="#">Lien sous menu 4</a></li>
-			<li><a href="#">Lien sous menu 4</a></li>
-		</ul>
-	</li>
-	<li><a href="#">H&ocirctel</a>
-		<ul>
-			<li><a href="#">Lien sous menu 5</a></li>
-			<li><a href="#">Lien sous menu 5</a></li>
-			<li><a href="#">Lien sous menu 5</a></li>
-			<li><a href="#">Lien sous menu 5</a></li>
-		</ul>
-	</li>
-</ul>
+<?php 
+
+echo Tableau();
+
+?>
 
 </div>
 
@@ -173,83 +101,26 @@ include ROOT_PATH.'/Includes/fonction.php';
 
 
 
-/*  DEBUT TRUC WIKIPEDIA
+// DEBUT TRUC WIKIPEDIA
 
-$query = $_POST["ville"];
-$query2 = $query;
+$thisville = $_POST["ville"];
+echo carte_ville($thisville);
 
-$url = 'http://fr.wikipedia.org/w/api.php?format=json&action=parse&page='.$query2;
-$url = 'http://fr.wikipedia.org/w/api.php?format=json&action=parse&page=Nancy';
-$ch = curl_init($url);
-curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt ($ch, CURLOPT_USERAGENT, "TestScript");
-$c = curl_exec($ch);
+// FIN TRUC 'de psychopathe' AVEC WIKIPEDIA 
 
-$json = json_decode($c);
 
-$content = $json->{'parse'}->{'text'}->{'*'}; 
-
-$i=0;
-
-for($r=1;$r<3;$r++){
-$e=0;
-while ($e==0) {
-
-    if (($content[$i].$content[$i+1].$content[$i+2])=="<p>") {
-        $e=1;
-    }
-    $i=$i+1;
-
-}
-$e=0;
-while ($e==0) {
-
-    if (($content[$i].$content[$i+1].$content[$i+2])=="</p") {
-        $e=1;
-    }
-    $i=$i+1;
-
-}
-}
-
-while ($e==0) {
-
-    if (($content[$i].$content[$i+1].$content[$i+2])=="<p>") {
-        $e=1;
-    }
-    $i=$i+1;
-
-}
-
-$text="";
-$e=0;
-
-while ($e==0) {
-
-    if (($content[$i].$content[$i+1].$content[$i+2])=="yme") {
-        $e=1;
-    }
-
-    $text=$text.$content[$i];
-    $i=$i+1;
-
-}
-
-$text[0]="";
-$text[1]="";
-$text[2]="";
-
-$text=$text.'my"></span></div></div></div></div></div></td></tr></table>';
-
-echo $text;
-
-*/ // FIN TRUC 'de psychopathe' AVEC WIKIPEDIA 
  ?>
 
 
+<<<<<<< HEAD
 <!--
 <?php echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$query.'&amp;width=500&amp;height=80&amp;rows=2&amp;columns=20&amp;orientation=horizontal" frameborder="0" width="500" height="80" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>'?>
 -->
+=======
+
+<?php echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$_POST["ville"].'&amp;width=600&amp;height=120&amp;rows=1&amp;columns=8&amp;orientation=horizontal" frameborder="0" width="600" height="120" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>'?>
+
+>>>>>>> origin/master
 
 
 
