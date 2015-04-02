@@ -32,3 +32,33 @@
 	-webkit-border-radius:  5px;
 	border-radius:  5px;
 }
+
+#description{
+	font-size: 20px;
+	text-align: justify;
+}
+
+#description2{
+	font-size: 20px;
+	text-align: center;
+}
+
+#photo{
+	width : 200px;
+	height : 250px;
+	border-radius : 50px;
+}
+
+#photo2{
+	width : 250px;
+	height : 250px;
+	border-radius : 50px;
+}
+
+#photos{
+	text-align: center;
+}
+
+
+
+

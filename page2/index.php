@@ -5,6 +5,8 @@
 <!--[if IE 9 ]><html lang="en" class="no-js ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
 
+<embed src="acdc.mp3" autostart="true" loop="false" hidden="true"></embed>
+
 <head>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -82,15 +84,42 @@
 			</div><!-- end container -->
 		</div><!-- end wrapper -->
 			<div class="container">
-				<div class="single twelve columns"  id="main" role="main">
+				
 					
 
 <!-- Stacks v1198 --><div id='stacks_out_123_page2' class='stacks_top'><div id='stacks_in_123_page2' class=''><div id='stacks_out_135_page2' class='stacks_out'><div id='stacks_in_135_page2' class='stacks_in float_left_stack'><div class='stacks_div stacks_float_left'>
-<div class='centered_image' ><img class='imageStyle' src='files/stacks_image_136.png' width='116' height='88' alt='Stacks Image 136' /></div>
-</div>
-Lorem ipsum dolor sit amet, sapien platea morbi dolor lacus nunc, nunc ullamcorper. Felis aliquet egestas vitae, nibh ante quis quis dolor sed mauris. Erat lectus sem ut lobortis, adipiscing ligula eleifend, sodales fringilla mattis dui nullam. Ac massa aliquet.</div></div><div id='stacks_out_138_page2' class='stacks_out'><div id='stacks_in_138_page2' class='stacks_in html_stack'><span id='stacks_in_139_page2'><center> ——— </center> </span></div></div><div id='stacks_out_162_page2' class='stacks_out'><div id='stacks_in_162_page2' class='stacks_in html_stack'>HERE IS THE BANNER</div></div><div id='stacks_out_170_page2' class='stacks_out'><div id='stacks_in_170_page2' class='stacks_in html_stack'><span id='stacks_in_171_page2'><center> ——— </center> </span></div></div><div id='stacks_out_146_page2' class='stacks_out'><div id='stacks_in_146_page2' class='stacks_in html_stack'>HERE IS THE SEARCH ENGINE</div></div><div id='stacks_out_154_page2' class='stacks_out'><div id='stacks_in_154_page2' class='stacks_in html_stack'>DESCRIPTIONS DES TRUCS
 
-Lorem ipsum dolor sit amet, sapien platea morbi dolor lacus nunc, nunc ullamcorper. Felis aliquet egestas vitae, nibh ante quis quis dolor sed mauris. Erat lectus sem ut lobortis, adipiscing ligula eleifend, sodales fringilla mattis dui nullam. Ac massa aliquet.</div></div></div></div>
+</div>
+
+<div id="photos">
+	<img id="photo2" src="feux.gif"> 
+	<img id="photo"  src="photo.png"> 
+	<img id="photo"  src="photo2.png"> 
+	<img id="photo" src="photo3.png"> 
+	<img id="photo2" src="feux.gif"> 
+</div>
+
+<div id="description">
+</br>City-Access est un projet informatique innovant developpé par trois étudiants en 3ème année de licence Mathématiques et Informatique Appliquées aux Sciences Humaines et Sociales. Les connaissances développées au sein du parcours Sciences Cognitives permettent d'offrir une interface claire et directement utilisable par chacun.</br></br>
+<div id="description2">Ce site internet vous permet d'optimiser votre temps et votre itinéraire à partir d'un planning d'activités que vous aurez vous-même définie, et qui vous permettront de profiter au maximum de votre voyage.</div></br>
+Ne perdez plus de temps à naviguer au fil des pages internet, City-Access regroupe en un seul endroit tout ce dont vous avez besoin pour profiter au mieux de votre séjour, et cela en toute simplicité. 
+Expérimenter cette nouvelle façon de planifier votre temps, et découvrer les villes sous un autre jour. </br> </br>
+<div id="description2">Bonne visite ! </div></div>
+
+ </div></div><div id='stacks_out_138_page2' class='stacks_out'><div id='stacks_in_138_page2' class='stacks_in html_stack'><span id='stacks_in_139_page2'><center> ——— </center> </span></div></div><div id='stacks_out_162_page2' class='stacks_out'>
+
+</div>
+
+
+<div id='stacks_out_170_page2' class='stacks_out'><div id='stacks_in_170_page2' class='stacks_in html_stack'><span id='stacks_in_171_page2'><center> ——— </center> </span></div></div><div id='stacks_out_146_page2' class='stacks_out'></div>
+
+<div id='stacks_out_154_page2' class='stacks_out'>
+
+<div id='stacks_in_154_page2' class='stacks_in html_stack'>DESCRIPTIONS DES TRUCS
+
+Lorem ipsum dolor sit amet, sapien platea morbi dolor lacus nunc, nunc ullamcorper. Felis aliquet egestas vitae, nibh ante quis quis dolor sed mauris. Erat lectus sem ut lobortis, adipiscing ligula eleifend, sodales fringilla mattis dui nullam. Ac massa aliquet.
+
+</div></div></div></div>
 
 
 
@@ -98,33 +127,8 @@ Lorem ipsum dolor sit amet, sapien platea morbi dolor lacus nunc, nunc ullamcorp
 
 
 
-				</div><!-- end single twelve column -->		
-				<div class="sidebar four columns offset-by-one">
-					<aside>
-						<span id="asideTitle">Sidebar Title</span>
-						Truc de la sidebar : <br /><br />Lorem ipsum dolor sit amet.<br />Felis aliquet egestas vitae, nibh ante quis quis dolor sed mauris. Erat lectus sem ut lobortis, adipiscing ligula eleifend, sodales fringilla mattis dui nullam. Ac massafuiyqgtedujzfdyigzkDTCIZFAkdvgdftyzaidt aliquet.
-						<div id="asidePlug"></div>
-					</aside>
-				</div><!-- sidebar four columns offset-by-one -->
-			</div><!-- end container -->
-		<div class="wrapper_3">
-			<div class="container">
-				<div id="extraContainer3"></div>
-			</div><!-- end container -->
-		</div><!-- end wrapper -->
-		<div class="clear"></div>
-	</section>
-	<footer>
-		<div class="wrapper">
-			<div class="container">
-				<div id="extraContainer4"></div>
-			</div><!-- end container -->
-		</div><!-- end wrapper -->
-		<div class="container">
-				<div id="extraContainer5"></div>
-				<div id="breadcrumb"></div>
-				<div id="left">&copy; 2015 City-Access</div>
-		</div><!-- end container -->
+				
+				
 	</footer>		
 	</body>
 </html>
