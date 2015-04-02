@@ -3,7 +3,7 @@
 <?php
 if( ! defined('ROOT_PATH') )	define('ROOT_PATH', dirname(__FILE__).'/..');
 
-include ROOT_PATH.'/Includes/fonction.php';
+include_once ROOT_PATH.'/Includes/fonction.php';
 ?>
 
 <!--[if IE 7 ]><html lang="en" class="no-js ie7"><![endif]-->
@@ -173,77 +173,15 @@ include ROOT_PATH.'/Includes/fonction.php';
 
 
 
-/*  DEBUT TRUC WIKIPEDIA
+// DEBUT TRUC WIKIPEDIA
 
-$query = $_POST["ville"];
-$query2 = $query;
+$thisville = $_POST["ville"];
 
-$url = 'http://fr.wikipedia.org/w/api.php?format=json&action=parse&page='.$query2;
-$url = 'http://fr.wikipedia.org/w/api.php?format=json&action=parse&page=Nancy';
-$ch = curl_init($url);
-curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
-curl_setopt ($ch, CURLOPT_USERAGENT, "TestScript");
-$c = curl_exec($ch);
-
-$json = json_decode($c);
-
-$content = $json->{'parse'}->{'text'}->{'*'}; 
-
-$i=0;
-
-for($r=1;$r<3;$r++){
-$e=0;
-while ($e==0) {
-
-    if (($content[$i].$content[$i+1].$content[$i+2])=="<p>") {
-        $e=1;
-    }
-    $i=$i+1;
-
-}
-$e=0;
-while ($e==0) {
-
-    if (($content[$i].$content[$i+1].$content[$i+2])=="</p") {
-        $e=1;
-    }
-    $i=$i+1;
-
-}
+if (appartient($thisville)) {
+	echo carte_ville($thisville);
 }
 
-while ($e==0) {
-
-    if (($content[$i].$content[$i+1].$content[$i+2])=="<p>") {
-        $e=1;
-    }
-    $i=$i+1;
-
-}
-
-$text="";
-$e=0;
-
-while ($e==0) {
-
-    if (($content[$i].$content[$i+1].$content[$i+2])=="yme") {
-        $e=1;
-    }
-
-    $text=$text.$content[$i];
-    $i=$i+1;
-
-}
-
-$text[0]="";
-$text[1]="";
-$text[2]="";
-
-$text=$text.'my"></span></div></div></div></div></div></td></tr></table>';
-
-echo $text;
-
-*/ // FIN TRUC 'de psychopathe' AVEC WIKIPEDIA 
+// FIN TRUC 'de psychopathe' AVEC WIKIPEDIA 
  ?>
 
 

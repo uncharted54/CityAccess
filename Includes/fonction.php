@@ -1,9 +1,27 @@
  <?php
 
+function appartient($ville){
+    $all=array('Paris','Nancy','Metz');
+    $val=false;
+    for($i=0;$i<count($all)-1;$i++){
+        if ($all[$i]==$ville) {
+            $val=true;
+        }
+    }
+    return $val;
+}
+
+
 
 function carte_ville($query){
 
+
+
+$query = $_POST["ville"];
+$query2 = $query;
+
 $url = 'http://fr.wikipedia.org/w/api.php?format=json&action=parse&page='.$query;
+
 $ch = curl_init($url);
 curl_setopt ($ch, CURLOPT_RETURNTRANSFER, 1);
 curl_setopt ($ch, CURLOPT_USERAGENT, "TestScript");
@@ -63,9 +81,10 @@ $text[0]="";
 $text[1]="";
 $text[2]="";
 
-$text=$text.'my"></span></div></div></div></div></td></tr>';
+$text=$text.'my"></span></div></div></div></div></div></td></tr></table>';
 
-return "coucou";
+return $text;
 }
+
 
 ?>
