@@ -82,6 +82,7 @@ $e=0;
 
 $text[0]="";
 $text[1]="";
+
 $text[2]="";
 
 $text=$text.'my"></span></div></div></div></div></div></td></tr></table>';
