@@ -1,51 +1,21 @@
 <!doctype html>  
 
+<?php
+if( ! defined('ROOT_PATH') )	define('ROOT_PATH', dirname(__FILE__).'/..');
+
+include_once ROOT_PATH.'/Includes/fonction.php';
+include_once ROOT_PATH.'/Includes/reste.php';
+
+?>
+
 <!--[if IE 7 ]><html lang="en" class="no-js ie7"><![endif]-->
 <!--[if IE 8 ]><html lang="en" class="no-js ie8"><![endif]-->
 <!--[if IE 9 ]><html lang="en" class="no-js ie9"><![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--><html lang="en" class="no-js"><!--<![endif]-->
 
 <head>
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="generator" content="RapidWeaver" />
-		
-		<title>Infos | City-Access</title>
-		<link rel="stylesheet" type="text/css" media="all" href="../rw_common/themes/allegro/consolidated.css" />
-		
-		
-		
-		
-		<link href='http://fonts.googleapis.com/css?family=Merriweather:400,400italic' rel='stylesheet' type='text/css'>
-		<link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
-		<script type="text/javascript" src="../rw_common/themes/allegro/javascript.js"></script>
-		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/function.js"></script>
-		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/retina.js"></script>
-		
-  		<script>RwSet={pathto:"../rw_common/themes/allegro/javascript.js",baseurl:"http://www.city-access.com/"};</script>
-  		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/modernizr.min.js"></script>
-  		
-		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/slideshow/jquery.easing.1.3.js"></script>
-  		
-  		<script type="text/javascript" src="../rw_common/themes/allegro/scripts/sidebar/left.js"></script>
-		
-		
-		
-	    		<link rel='stylesheet' type='text/css' media='all' href='../rw_common/plugins/stacks/stacks.css' />
-		<!--[if lte IE 7]>
-			<link rel='stylesheet' type='text/css' media='all' href='../rw_common/plugins/stacks/stacks_ie.css' />
-		<![endif]-->
-		<link rel='stylesheet' type='text/css' media='all' href='files/stacks_page_page2.css' />
-		<script type='text/javascript' charset='utf-8' src='files/stacks_page_page2.js'></script>
 
-	    
-	    
-	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<style>.skiptonav, #menu {display:none;}</style>
-	<![endif]-->
+<?php echo headphp2(); ?>
 
 </head>
 	

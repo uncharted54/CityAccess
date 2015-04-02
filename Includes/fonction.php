@@ -1,5 +1,6 @@
  <?php
 
+
 function appartient($ville){
     $all=array('Paris','Nancy','Metz');
     $val=false;
