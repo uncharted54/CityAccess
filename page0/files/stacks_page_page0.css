@@ -33,6 +33,9 @@
 	border-radius:  5px;
 }
 
+#map_canvas { width: 100%; 
+	height: 100% 
+}
 
 
 input#recherche{
@@ -53,6 +56,10 @@ input#rechercher{
 	font-size: 15px
 }
 
+#map_canvas{
+	height : 400px;
+	width: 400px;
+}
 
 
 #menu-demo2{
