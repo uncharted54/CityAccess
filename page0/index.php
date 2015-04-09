@@ -1,5 +1,6 @@
 <!doctype html>  
 
+
 <?php
 if( ! defined('ROOT_PATH') )	define('ROOT_PATH', dirname(__FILE__).'/..');
 
@@ -16,11 +17,25 @@ include_once ROOT_PATH.'/Includes/tableau.php';
 
 <head>
 
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+
 <?php echo headphp1(); ?>
 
 </head>
+
+
+
+
+
+
+
+
 	
-<body>
+<body onload="initialize()">
+
+
+
 	<header>	
 			<div id="headerWrapper">
 				<div class="container">
@@ -33,7 +48,7 @@ include_once ROOT_PATH.'/Includes/tableau.php';
 <!-- Barre de recherche pour retrouver un lieu ainsi que le bouton -->
 	<form METHOD="POST" ACTION="index.php" > 
 
-	<input type="text" id="recherche" name="ville" size"25"  onclick="texte.value='';" placeholder="Rechercher une ville" /> 
+	<input type="text" id="recherche" name="ville" size"25"  onclick="texte.value='';" placeholder="Rechercher un site" /> 
 
 	<input type="submit" id="rechercher" name="lien_ok" value="Rechercher"/> 
 
@@ -89,6 +104,8 @@ include_once ROOT_PATH.'/Includes/tableau.php';
 
 <!-- Stacks v1198 --><div id='stacks_out_123_page0' class='stacks_top'><div id='stacks_in_123_page0' class=''><div id='stacks_out_135_page0' class='stacks_out'><div id='stacks_in_135_page0' class='stacks_in float_left_stack'><div class='stacks_div stacks_float_left'>
 <div class='centered_image' ></div>
+
+<div id="map_canvas"> </div>
 </div>
 
 
@@ -109,9 +126,26 @@ echo "<h1> VILLE !!!!!! </h1>";
 $thisville = $_POST["ville"];
 echo carte_ville($thisville);
 
+<<<<<<< HEAD
 echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$_POST["ville"].'&amp;width=600&amp;height=120&amp;rows=1&amp;columns=8&amp;orientation=horizontal" frameborder="0" width="600" height="120" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>';
 	
 }
+=======
+// FIN TRUC 'de psychopathe' AVEC WIKIPEDIA 
+
+
+ ?>
+
+
+
+<!--
+<?php echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$query.'&amp;width=500&amp;height=80&amp;rows=2&amp;columns=20&amp;orientation=horizontal" frameborder="0" width="500" height="80" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>'?>
+-->
+
+
+
+
+>>>>>>> origin/master
 
 
 
@@ -143,6 +177,10 @@ Lorem ipsum dolor sit amet, sapien platea morbi dolor lacus nunc, nunc ullamcorp
 						</ol>
 
 						<br />Felis aliquet egestas vitae, nibh ante quis quis dolor sed mauris. Erat lectus sem ut lobortis, adipiscing ligula eleifend, sodales fringilla mattis dui nullam. Ac massa aliquet.
+
+
+						<?php echo '<iframe style="margin: 0px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$_POST["ville"].'&amp;width=200&amp;height=450&amp;rows=3&amp;columns=2&amp;orientation=horizontal" frameborder="0" width="210" height="250" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>'?>
+
 						<div id="asidePlug"></div>
 					</aside>
 				</div><!-- sidebar four columns offset-by-one -->
@@ -167,4 +205,55 @@ Lorem ipsum dolor sit amet, sapien platea morbi dolor lacus nunc, nunc ullamcorp
 		</div><!-- end container -->
 	</footer>		
 	</body>
+
+
+
+
+
+<script type="text/javascript">
+  /*var previousPosition = null; */
+ 
+function initialize() {
+  map = new google.maps.Map(document.getElementById("map_canvas"), {
+        zoom: 10,
+        center: new google.maps.LatLng(48.69745572503684, 6.17112944335263),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+      });   
+} 
+ 
+/*if (navigator.geolocation)
+  var watchId = navigator.geolocation.watchPosition(successCallback,
+                            null,
+                            {enableHighAccuracy:true});
+else
+  alert("Votre navigateur ne prend pas en compte la géolocalisation HTML5");    
+ 
+function successCallback(position){
+  map.panTo(new google.maps.LatLng(position.coords.latitude, position.coords.longitude));
+  var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(position.coords.latitude, position.coords.longitude), 
+    map: map
+  }); 
+  if (previousPosition){
+    var newLineCoordinates =
+    [
+      new google.maps.LatLng(previousPosition.coords.latitude, previousPosition.coords.longitude),
+      new google.maps.LatLng(position.coords.latitude, position.coords.longitude)
+    ];
+         
+    var newLine = new google.maps.Polyline({
+      path: newLineCoordinates,        
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 2
+    });
+    newLine.setMap(map);
+  }
+  previousPosition = position;
+}
+
+*/
+
+</script>
+
 </html>
