@@ -118,7 +118,6 @@ echo carte_ville($thisville);
 -->
 
 
-<?php echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$_POST["ville"].'&amp;width=600&amp;height=120&amp;rows=1&amp;columns=8&amp;orientation=horizontal" frameborder="0" width="600" height="120" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>'?>
 
 
 
@@ -151,6 +150,10 @@ Lorem ipsum dolor sit amet, sapien platea morbi dolor lacus nunc, nunc ullamcorp
 						</ol>
 
 						<br />Felis aliquet egestas vitae, nibh ante quis quis dolor sed mauris. Erat lectus sem ut lobortis, adipiscing ligula eleifend, sodales fringilla mattis dui nullam. Ac massa aliquet.
+
+
+						<?php echo '<iframe style="margin: 0px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$_POST["ville"].'&amp;width=200&amp;height=450&amp;rows=3&amp;columns=2&amp;orientation=horizontal" frameborder="0" width="210" height="250" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>'?>
+
 						<div id="asidePlug"></div>
 					</aside>
 				</div><!-- sidebar four columns offset-by-one -->
