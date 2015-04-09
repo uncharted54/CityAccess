@@ -6,7 +6,7 @@ function Tableau(){
 
 
 $TabF='<ul id="menu-demo2">';
-$Loisir=array("Loisir","");
+$Loisir=array("Loisir");
 
 $search = "SELECT nom  FROM loisirs";
 $result = mysql_query($search);
@@ -23,7 +23,7 @@ while (isset($row[0]) || $i == 0) {
 }
 
 
-$Musée=array("Musée","");
+$Musée=array("Musée");
 
 $search = "SELECT nom  FROM musees";
 $result = mysql_query($search);
@@ -39,7 +39,7 @@ while (isset($row[0]) || $i == 0) {
 }
 
 
-$Resto=array("Resto","");
+$Resto=array("Resto");
 
 $search = "SELECT nom  FROM restaurants";
 $result = mysql_query($search);
@@ -55,7 +55,7 @@ while (isset($row[0]) || $i == 0) {
 }
 
 
-$Magasin=array("Magasin","");
+$Magasin=array("Magasin");
 
 $search = "SELECT nom  FROM magasins";
 $result = mysql_query($search);
@@ -71,7 +71,7 @@ while (isset($row[0]) || $i == 0) {
 }
 
 
-$Hotel=array("Hotel","");
+$Hotel=array("Hotel");
 
 $search = "SELECT nom  FROM hotels";
 $result = mysql_query($search);
@@ -92,13 +92,13 @@ $menu=array($Musée,$Loisir,$Resto,$Magasin,$Hotel);
 for ($i=0; $i < count($menu); $i++) {
     $TabF=$TabF.'<li><a href="#">'.$menu[$i][0].'</a><ul>';
         for ($j=1; $j<count($menu[$i]); $j++) {
-            $TabF=$TabF.'<li><a href="#">'.$menu[$i][$j].'</a></li>';
+            $TabF=$TabF.'<li><input type="radio" id="centre" name="centre" onclick="document.choose.submit()" value="'.$menu[$i][$j].'"><a href="#">'.$menu[$i][$j].'</a></li>';
         }
     $TabF=$TabF.'</ul></li>';
 }
+
+
 $TabF=$TabF.'</ul>';
-
-
 
 return $TabF;
 
