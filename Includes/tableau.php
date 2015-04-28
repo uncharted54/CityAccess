@@ -90,7 +90,7 @@ $menu=array($Musée,$Loisir,$Resto,$Magasin,$Hotel);
 for ($i=0; $i < count($menu); $i++) {
     $TabF=$TabF.'<li><a href="#">'.$menu[$i][0].'</a><ul>';
         for ($j=1; $j<count($menu[$i]); $j++) {
-            $TabF=$TabF.'<li><input type="radio" id="centre" name="centre" onclick="document.choose.submit()" value="'.$menu[$i][$j].'"><a href="#">'.$menu[$i][$j].'</a></li>';
+            $TabF=$TabF.'<li><input type="checkbox" id="centre" name="centre" onclick="document.choose.submit()" value="'.$menu[$i][$j].'"><a href="#">'.$menu[$i][$j].'</a></li>';
         }
     $TabF=$TabF.'</ul></li>';
 }
