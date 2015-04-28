@@ -52,7 +52,7 @@ include_once ROOT_PATH.'/Includes/tableau.php';
 
 	<input type="submit" id="rechercher" name="lien_ok" value="Rechercher"/> 
 
-	</form>
+	</from>
 
 
 
@@ -74,11 +74,11 @@ include_once ROOT_PATH.'/Includes/tableau.php';
 
 <div>
 
+<?php 
 
+echo Tableau();
 
-<form action="" method="post" name="choose" > 
-<?php echo Tableau(); ?>
-</form> 
+?>
 
 </div>
 
@@ -116,21 +116,13 @@ include_once ROOT_PATH.'/Includes/tableau.php';
 
 <?php 
 
-if (isset($_POST["centre"])) {
 
-	echo $_POST["centre"];
 
-} else {
+// DEBUT TRUC WIKIPEDIA
 
-echo "<h1> VILLE !!!!!! </h1>";
 $thisville = $_POST["ville"];
 echo carte_ville($thisville);
 
-<<<<<<< HEAD
-echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$_POST["ville"].'&amp;width=600&amp;height=120&amp;rows=1&amp;columns=8&amp;orientation=horizontal" frameborder="0" width="600" height="120" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>';
-	
-}
-=======
 // FIN TRUC 'de psychopathe' AVEC WIKIPEDIA 
 
 
@@ -145,11 +137,9 @@ echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/l
 
 
 
->>>>>>> origin/master
 
 
 
- ?>
 
 </center>
 
@@ -215,11 +205,28 @@ Lorem ipsum dolor sit amet, sapien platea morbi dolor lacus nunc, nunc ullamcorp
  
 function initialize() {
   map = new google.maps.Map(document.getElementById("map_canvas"), {
-        zoom: 10,
+        zoom: 13,
         center: new google.maps.LatLng(48.69745572503684, 6.17112944335263),
         mapTypeId: google.maps.MapTypeId.ROADMAP
       });   
-} 
+ 
+
+var newLineCoordinates =
+    [
+      new google.maps.LatLng(48.693618,6.183240999999953),
+      new google.maps.LatLng(48.689838,6.174447999999984),
+      new google.maps.LatLng(48.687164,6.172270000000026)
+    ];
+
+var newLine = new google.maps.Polyline({
+      path: newLineCoordinates,        
+      strokeColor: "#FF0000",
+      strokeOpacity: 1.0,
+      strokeWeight: 2
+    });
+    newLine.setMap(map);
+}
+
  
 /*if (navigator.geolocation)
   var watchId = navigator.geolocation.watchPosition(successCallback,
