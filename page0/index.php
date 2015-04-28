@@ -122,21 +122,60 @@ echo Tableau();
 	echo $c;
 	echo getInfo("prix",$c);
 
+<<<<<<< Updated upstream
+=======
+	echo $_POST["centre"];
+>>>>>>> Stashed changes
 
 // DEBUT TRUC WIKIPEDIA
 
 $thisville = $_POST["ville"];
 echo carte_ville($thisville);
 
+<<<<<<< Updated upstream
 
+=======
+
+
+echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$_POST["ville"].'&amp;width=600&amp;height=120&amp;rows=1&amp;columns=8&amp;orientation=horizontal" frameborder="0" width="600" height="120" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>';
+	
+
+
+
+echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$_POST["ville"].'&amp;width=600&amp;height=120&amp;rows=1&amp;columns=8&amp;orientation=horizontal" frameborder="0" width="600" height="120" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>';
+	
+
+
+>>>>>>> Stashed changes
 // FIN TRUC 'de psychopathe' AVEC WIKIPEDIA 
 
 
  ?>
 
 
+<<<<<<< Updated upstream
+=======
+
+
+<!--
+<?php echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$query.'&amp;width=500&amp;height=80&amp;rows=2&amp;columns=20&amp;orientation=horizontal" frameborder="0" width="500" height="80" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>'?>
+-->
+
+
+
+>>>>>>> Stashed changes
 
  ?>
+
+
+<!--
+<?php echo '<iframe style="margin: 10px"src= "http://www.panoramio.com/wapi/template/list.html?tag='.$query.'&amp;width=500&amp;height=80&amp;rows=2&amp;columns=20&amp;orientation=horizontal" frameborder="0" width="500" height="80" scrolling="yes" marginwidth="0" marginheight="0"> </iframe>'?>
+-->
+
+
+
+
+
 
 
 
