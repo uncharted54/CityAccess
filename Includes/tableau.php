@@ -19,9 +19,7 @@ while (isset($row[0]) || $i == 0) {
 	if (isset($thisname)) {
 		array_push($Loisir,$thisname);
 	}
-
 }
-
 
 $Musée=array("Musée");
 
@@ -103,6 +101,14 @@ $TabF=$TabF.'</ul>';
 return $TabF;
 
 }
+
+function getInfo($what, $s) { 
+    $search = "SELECT " . $what . " FROM musees,hotels,restaurants,loisirs,magasins WHERE nom = '" . $s . "'";
+    $thisc = mysql_query($search);
+    $row = mysql_fetch_row($thisc);
+    return $row[0];
+}
+
 
 
 
